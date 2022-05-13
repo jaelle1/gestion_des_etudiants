@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+    padding: 0;
+   /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain
+    ;
+    */
+}
+
+
+/*footer*/
+
+footer{
+    
+    background-color: green;
+}
+.copyright{
+    font-weight: bold;
+    color:white;
+    font-size: 18px;
+}
+/*page inscription administrateur*/
+form{
+    height: 380px;
+    text-align: center;
+   /* margin-top: 20px;*/
+    
+    
+}
+input{
+    border-radius: 15px;
+    height: 40px;
+    width: 250px;
+    border: solid 1px black;
+    
+
+}
+.formulaire{
+    margin-top: 20px;
+}
+button{
+    height: 40px;
+    width: 120px;
+    background-color: green;
+
+}
+.inscrire{
+    border-radius: 15px;
+    margin-top: 5px;
+    border: solid 1px;
+    color: white;
+
+}
+/*fin inscription et debut authentification*/
+.logo{
+    height: 100px;
+    width: 100px;
+    
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    
+}
+.texte h2{
+    margin-top: 40px;
+}
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    text-decoration: underline solid 5px green;    
+}
+.connecter{
+    border-radius: 15px;
+    margin-top: 5px;
+    border: solid 1px;
+    color: white;
+}
+.user{
+    text-align: center;
+    margin-top: 40px;
+    height: 320px;
+    
+}
+/*fin authenfication et debut page d'acceuil*/
+.acceuil{
+    font-weight: bold;
+    font-size: 15px;
+
+}
+.acceuil a{
+    text-decoration: none;
+}
+.enregistrer{
+    height: 50px;
+    width: 200px;
+    border: solid 1px;
+    border-radius: 15px;
+    background-color: green;
+    padding-top: 5px;
+    color: white;
+    margin-top: 5rem;
+
+}
+.lister{
+    height: 50px;
+    width: 200px;
+    border: solid 1px;
+    border-radius: 15px;
+    background-color: red;
+    padding-top: 5px;
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+}
+.ajouter{
+    height: 50px;
+    width: 200px;
+    border: solid 1px;
+    border-radius: 15px;
+    
+    background-color:gray;
+    padding-top: 5px;
+    color: white;
+    margin-top: 0.3rem;
+    margin-bottom: 3rem;
+
+}
+/*fin acceuil et debut tuteur*/
+.valider{
+    border-radius: 15px;
+    margin-top: 5px;
+    border: solid 1px;
+    color: white;
+
+}
+/*page fiche enregistrement des etudiants*/
+.select{
+border-radius: 15px;
+height: 40px;
+width: 250px;
+border: solid 1px;
+margin-top: 10px;
+margin-left: 8rem;
+}
+.ajout{
+    border-radius: 15px;
+    margin-top: 10px;
+    border: solid 1px;
+    color: white;
+margin-top: 20px;
+}
+button a{
+    text-decoration: none;
+    color: white;
+    
+}
+.valid{
+    border-radius: 15px;
+    margin-top: 5px;
+    border: solid 1px;
+    color: white;
+  
+}
