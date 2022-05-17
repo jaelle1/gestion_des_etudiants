@@ -1,4 +1,12 @@
+<?php
+include("../administrateur/connexion.php");
+$queri="SELECT * FROM tuteur ";
+$result=mysqli_query($base, $queri);
+$rows=mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../bootstrap-5.1.3-dist/css/bootstrap.min.css">
-    <title>enregistrement-tuteur</title>
+    <title>enregistrement-etudiant</title>
 </head>
 <body>
 <header class="container">
@@ -24,20 +32,25 @@
 <div class="container">
         <div class="row">
             <div class="col">
-                <form action="" method="post"> 
-                    <input type="text" name="nom" value="nom" placeholder="  nom"  class="formulaire" id="name"><br>
-                    <input type="text" name="prenom" value="prenom" placeholder="prenom" class="formulaire" id="prename"><br>
+                <form action="./bdd_formulaire_etudiant.php" method="post"> 
+                    <input type="text" name="nom"  placeholder="  nom"  class="formulaire" id="name"><br>
+                    <input type="text" name="prenom" placeholder="prenom" class="formulaire" id="prename"><br>
+                    
+                    <input type="number" name="numero" placehoder="numero" class="formulaire"id=""><br>
                     <input type="email" name="email" placeholder="email" class="formulaire" id="email"><br>
-                    <input type="number" name="number" class="formulaire"id=""><br>
-                    <select name="choix" class="select" id=""><br><br><br><br>
-                        <option value="tuteur1"></option>
-                        <option value="tuteur2">tuteur</option>
-                        <option value="tuteur3"></option>
-                        <option value="tuteur4"></option>
-                        <option value="tuteur5"></option>
+                    <select name="id" class="select"  id=""><br><br><br><br>
+                    <option value="-1">selectionner un tuteur</option>
+                    <?php 
+                        foreach($rows as $row){
+                         ?>
+                    <option value="<?=$row['id']?>"><?=$row['nom'] ?>  <?=$row['prenom']  ?></option>
+
+                        <?php }?>;
+
+
                     </select>
-                    <button type="submit" name="ajout" value="ajout" class="ajout"><a href="#">ajouter tuteur</a></button><br><br>
-                    <button type="submit" name="valider" value="valider" class="valid">valider</button>
+                    <button type="submit" name="ajout" class="ajout"><a href="./enregistrement_tuteur.php">ajouter tuteur</a></button><br><br>
+                    <button type="submit" name="valider" class="valid">valider</button>
                     
                        
                 </form>

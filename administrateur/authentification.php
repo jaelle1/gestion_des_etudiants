@@ -23,13 +23,21 @@
     </header>
     <div class="container">
         <div class="row">
+        <?php
+                    if(isset($_GET["erreur"])){
+                        if($_GET["erreur"]=2){
+                            echo"non authentifier";
+                        }
+                    }
+                        ?>
             <div class="col">
-                <form action="" class="user" method="post ">
+                <form   class="user" method="post">
+                   
                    
                     <input type="email" name="email" placeholder="email" class="formulaire" id="email"><br><br>
-                    <input type="password" name="password" placeholder="password" id="passw"><br><br>
-                    
-                    <button type="submit" name="se connecter" value="se connecter" class="connecter">se connecter</button>
+                    <input type="password" name="password" placeholder="password" id="motdepasse"><br><br>
+                    <input type="checkbox" class="affich" onclick="Afficher()" id="aff"> Afficher le mot de passe<br><br>
+                    <input type="submit" name="connecter" value="connecter" placehoder="se connecter" class="connecter">
                     
                        
                 </form>
@@ -41,6 +49,61 @@
                     <p class="p-1 text-center copyright">copyright université joseph ki-zerbo 2020                   Tous droits reservés</p>
                 
     </footer>
-    
+   
+    <script>
+			function Afficher() {
+				var input = document.getElementById("motdepasse");
+				if (input.type == "password") {
+					input.type = "text";
+				} else {
+					input.type = "password";
+				}
+			}
+
+		</script>
 </body>
 </html>
+
+
+<?php
+
+    include("./connexion.php");
+    session_start();
+     if(isset($_POST['connecter'])){
+        //  $mail=stripslashes($_REQUEST['email']);
+        //  $email=mysqli_real_escape_string($base,$mail);
+        //  $pasword=stripslashes($_REQUEST['password']);
+        //  $password=mysqli_real_escape_string($base,$pasword);
+        $email=$_POST["email"];
+        $pasword=md5($_POST["password"]);
+
+          $query="SELECT * FROM administrateur WHERE `email`='$email' AND `password`='$pasword' ";
+        $verif=mysqli_query($base,$query) or die(mysql_error());
+         $rows = mysqli_num_rows($verif);
+         if($rows==1){
+          $_SESSION["email"]=$email;
+          header("location:../etudiant/acceuil.php");
+        // echo"connexion reussie";
+        }
+        else{
+        echo"l'email ou le mot de passe est incorrect";
+        } 
+    }
+   
+   
+   
+//    if(isset($_POST["connecter"])){
+//     $email=$_POST["email"];
+//     $password=md5($_POST["password"]);
+
+// $verifie=$base->prepare("SELECT*FROM administrateur WHERE `email`= email AND `password`= `password`");
+// $verifie-> execute(array('email'=>$email, 'password'=> $password));
+// $admin=$verifie->fetch();
+// if(!$admin){
+//     header("location: ./authentification.php?erreur=2");
+// }
+// else{
+//     header("location: ../etudiant/acceuil.php");
+// }
+//    }
+   ?>

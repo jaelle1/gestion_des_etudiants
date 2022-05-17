@@ -24,11 +24,11 @@
 <div class="container">
         <div class="row">
             <div class="col">
-                <form action="" method="post"> 
-                    <input type="text" name="nom" value="nom" placeholder=" nom"  class="formulaire" id="name"><br>
-                    <input type="text" name="prenom" value="prenom" placeholder="prenom" class="formulaire" id="prename"><br><br>
-                    <input type="number" name="number" id=""><br>
-                    <button type="submit" name="valider" value="valider" class="valider">valider</button>
+                <form action="./bdd_tuteur.php" method="post"> 
+                    <input type="text" name="nom"  placeholder=" nom"  class="formulaire" required="" id="name"><br>
+                    <input type="text" name="prenom"  placeholder="prenom"  required=""class="formulaire" id="prename"><br><br>
+                    <input type="number" name="numero" required="" id=""><br>
+                    <button type="submit" name="valider" class="valider">valider</button>
                     
                        
                 </form>

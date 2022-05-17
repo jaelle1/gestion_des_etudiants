@@ -10,7 +10,7 @@
     <title>page d'acceuil </title>
 </head>
 <body>
-<header>
+
 <header class="container">
          <div class="row ">
             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 logo">
@@ -24,20 +24,20 @@
         </div>
     </header>
     <div class="container">
-        <div class="row ">
-            <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 acceuil offset-md-5 text-center">
-                <a href="#"><p class="enregistrer">ENREGISTRER UN ETUDIANT</p>
+        <div class="row  text-center">
+            <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 acceuil offset-md-5 text-center">
+                <a href="./formulaire_etudiant.php"><p class="enregistrer">ENREGISTRER UN ETUDIANT</p>
             </a>
            </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 acceuil offset-md-5  text-center">
-                <a href="#"><p class="lister" >LISTER</p></a>
+        <div class="row text-center">
+            <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 acceuil offset-md-5  text-center">
+                <a href="./liste.php"><p class="lister" >LISTER</p></a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10 acceuil offset-md-5 text-center">
-                <a href="#"><p class="ajouter">ENREGISTRER UN TUTEUR</p></a>
+        <div class="row text-center">
+            <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 acceuil offset-md-5 text-center">
+                <a href="enregistrement_tuteur.php"><p class="ajouter">ENREGISTRER UN TUTEUR</p></a>
             </div>
         </div>
 

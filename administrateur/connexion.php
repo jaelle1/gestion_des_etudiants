@@ -1,11 +1,6 @@
 <?php
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=gestion_des_etudiants', 'root','');
+$base=new mysqli("localhost","root","","gestion_des_etudiants");
+if($base===false){
+    die("ERREUR:impossible de se connecter. ".mysqli_connect_error());
 }
-    catch (Exception $e)
-    {
-        die('Erreur: ' . $e->getMessage());
-    }
-
 ?>

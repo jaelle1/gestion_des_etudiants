@@ -1,30 +1,36 @@
 <?php
 
 include("./connexion.php");
+
+if(isset($_POST["inscrire"])){
+
+
 $nom=$_POST["nom"];
 $prenom=$_POST["prenom"];
 $email=$_POST["email"];
 $password=md5($_POST["password"]);
 $pconf=md5($_POST["pconf"]);
-$inscrire=$_POST["inscrire"];
-$_SESSION["nom"]=$nom;
-$_SESSION["prenom"]=$prenom;
+
+
+$query="INSERT  INTO `administrateur`(nom,prenom,email,password)
+VALUES ('$nom','$prenom','$email','$password')";
+$result=mysqli_query($base,$query);
 
 if($password==$pconf){
-$req=$bdd->prepare('SELECT INTO administrateur(nom,prenom,email,password)
-VALUES (:nom,:prenom,:email,:password)');
-$req->execute(array('nom'=>$nom,'prenom'=>$prenom,'email'=>$email,'password'=>$password,));
+    if($result){
+        
+        header('location:./inscription.php?error=1');
+    }
+    else{
+        echo"inscription echouée";
+        header('location:./inscription.php?eror=1');
 
-    session_start();
-    $_SESSION["nom"]=$_POST["nom"];
-    
-$_SESSION["prenom"]=$_POST["prenom"];
-header('location:./authentification.php');
-
+    }
 
 }
 else{
     header('location:./inscription.php?erreur=1');
+}
 }
 
 

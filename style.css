@@ -39,17 +39,16 @@ input{
 .formulaire{
     margin-top: 20px;
 }
-button{
-    height: 40px;
-    width: 120px;
-    background-color: green;
 
-}
 .inscrire{
     border-radius: 15px;
     margin-top: 5px;
     border: solid 1px;
     color: white;
+    height: 40px;
+    width: 120px;
+    background-color: green;
+
 
 }
 /*fin inscription et debut authentification*/
@@ -64,7 +63,7 @@ button{
     
 }
 .texte h2{
-    margin-top: 40px;
+    margin-top: 15px;
 }
 h2{
     font-size: 25px;
@@ -72,17 +71,31 @@ h2{
     color: red;
     text-decoration: underline solid 5px green;    
 }
+button{
+    background-color:green;
+    height: 40px;
+    width: 110px;
+} 
 .connecter{
     border-radius: 15px;
     margin-top: 5px;
     border: solid 1px;
     color: white;
+    height: 40px;
+    width: 120px;
+    background-color: green;
+    
 }
 .user{
     text-align: center;
     margin-top: 40px;
     height: 320px;
+
     
+}
+.affich{
+    height: 10px;
+    width: 10px;
 }
 /*fin authenfication et debut page d'acceuil*/
 .acceuil{
@@ -165,3 +178,80 @@ button a{
     color: white;
   
 }
+/*listes des etudnats*/
+.list{
+    border-radius: 15px !important;
+    border-color: green;
+    color: white;
+}
+
+
+/*fin page liste des etudiants et debut page index */
+.tete{
+ /* display: flex;  */
+ text-align: center;  
+}
+.entete{
+    background-color: green;
+}
+
+h1{
+    color: white;
+    /* background-color: green; */
+   
+}
+.logoimage{
+    height: 400px;
+    width: 700px;
+   
+
+}
+.logoimage img{
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+.conta{
+    text-align: center;
+    
+}
+.pp1{
+display: flex;
+text-align: center;
+padding-top: 10px;
+}
+.rowp{
+    text-align: center;
+}
+.pp1 a{
+    text-decoration: none;
+}
+.p1{
+background-color: green;
+font-weight: bold;
+font-size: 15px;
+border: solid 1px;
+border-radius: 15px;
+height: 40px;
+width: 100px;
+color: white !important;
+
+}
+.p2{
+    background-color: yellow;
+    
+    font-weight: bold;
+    font-size: 15px;
+    border: solid 1px;
+    border-radius: 15px;
+    height: 40px;
+    width: 100px;
+    color: white !important; 
+    /* margin-left: 20px; */
+}
+
