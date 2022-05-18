@@ -25,7 +25,7 @@ $rows=mysqli_fetch_all($result, MYSQLI_ASSOC);
         </div>
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10  texte text-center">
-               <h2>Gestion des etudiants</h2>
+               <h2>Fiche d'enregistrement d'un etudiant</h2>
            </div>
         </div>
 </header>
@@ -38,18 +38,20 @@ $rows=mysqli_fetch_all($result, MYSQLI_ASSOC);
                     
                     <input type="number" name="numero" placehoder="numero" class="formulaire"id=""><br>
                     <input type="email" name="email" placeholder="email" class="formulaire" id="email"><br>
-                    <select name="id" class="select"  id=""><br><br><br><br>
+                    <select name="id" class="select"  id=""><br>
                     <option value="-1">selectionner un tuteur</option>
                     <?php 
                         foreach($rows as $row){
                          ?>
-                    <option value="<?=$row['id']?>"><?=$row['nom'] ?>  <?=$row['prenom']  ?></option>
+                    <option value="<?=$row['id']?>"><?=$row['nom_tuteur'] ?>  <?=$row['prenom_tuteur']  ?></option>
 
                         <?php }?>;
 
 
                     </select>
-                    <button type="submit" name="ajout" class="ajout"><a href="./enregistrement_tuteur.php">ajouter tuteur</a></button><br><br>
+                    <button type="submit" name="ajout" class="ajout"><a href="./enregistrement_tuteur.php">ajouter tuteur</a></button><br>
+                    
+                    <button class="retour"><a href="./acceuil.php">retour</a></button>
                     <button type="submit" name="valider" class="valid">valider</button>
                     
                        

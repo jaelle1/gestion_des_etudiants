@@ -35,14 +35,10 @@
            echo"<div style='color:red; font-weight:bold; text-align:center; margin-top:20px;font-size:20px;'>mot de passe different! </div>";
        }
    }
-   if(isset($_GET["error"])){
-      if($_GET["error"]==1){
-           echo"<div style='color:green; font-weight:bold; text-align:center; margin-top:20px;font-size:20px;'>administrateur inscris avec succes</div>";
-       }
-   }
+   
    if(isset($_GET["eror"])){
     if($_GET["eror"]==1){
-         echo"<div style='color:green; font-weight:bold; text-align:center; margin-top:20px;font-size:20px;'>inscription</div>";
+         echo"<div style='color:green; font-weight:bold; text-align:center; margin-top:20px;font-size:20px;'>inscription echouée</div>";
      }
  }
    ?>
@@ -53,8 +49,7 @@
                     <input type="password" name="password" placeholder="password" class="formulaire" id="passw" required=""><br>
                     <input type="password" name="pconf" placeholder="pconfirmer" class="formulaire" id="ppassw" required=""><br>
                     <input type="submit" name="inscrire" id="insc" class="formulaire inscrire">
-                    <p  ><a href="../index.php">connectez-vous ici</a></p>
-                       
+                    
                 </form>
             </div>
         </div>

@@ -28,38 +28,50 @@ include("../administrateur/connexion.php");
            </div>
         </div>
     </header>
-    <div class="container"><div class="row">
+    
+    <div class="container">
+      <div class="row">
       <div class="col">
+        <button  offfset-md-5 class="etudiant">
+          <a href="./enregistrement_tuteur.php">ajouter</a>
+        </button>
         <?php
-        $qry="SELECT *FROM etudiant INNER JOIN tuteur WHERE etudiant.id_tuteur=tuteur.id ";
+        $qry="SELECT * FROM `etudiant` INNER JOIN `tuteur` WHERE etudiant.id_tuteur=tuteur.id ";
         $list=mysqli_query($base,$qry);
         if($list){
-          echo'<table class="table">
+          echo'<table class="table table-bordered border-tark table-hover">
           <thead>
-          <tr>
+          <tr class="element">
           <th scope="col list">N°</th>
           <th scope="col list">Nom</th>
           <th scope="col list">Prenom</th>
           <th scope="col list">Contact</th>
           <th scope="col list">Email</th>
-          <th scope="col list">id_tuteur</th>
+          <th scope="col list">nom tuteur</th>
+          <th scope="col list">prenom tuteur</th>
+          
           </tr>
          </thead>
          <tbody>';
-         while ($reso=mysqli_fetch_assoc) {
+         $x=1;
+         while ($data=mysqli_fetch_assoc($list)) {
            echo"<tr>
-           <th scope='row'>1</th>
-         while ($data=mysqli_fetch_assoc) {
-           <td>'.$data["nom"].'</td>
-           <td>Otto</td>
-           <td>@mdo</td>
-           <td>Otto</td>
-           <td>@mdo</td>
-           <td>Otto</td>
+           <td scope='row'>".$x."</td>
+           <td>".$data['nom']."</td>
+           <td>".$data['prenom']."</td>
+           <td>".$data['numero']."</td>
+           <td>".$data['email']."</td>
+           <td>".$data['nom_tuteur']."</td>
+           <td>".$data['prenom_tuteur']."</td>
+            </tr>";
            
-            </tr>
-           
+            $x=$x+1;
          }
+
+         echo"   
+         </tbody>
+       </table>";
+       
         }
 
 
@@ -74,23 +86,13 @@ include("../administrateur/connexion.php");
     
   
     
-    
-  </tbody>
-</table>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <a href="#">ajouter un etudiant</a>
-        </div>
-    </div>
-</div>
     <footer class=" col-lg-9 col-md-9 col-sm-10 col-xs-10 offset-md-2  offset-lg-2  offset-sm-2  offset-xs-2">
         
         <p class="p-1 text-center copyright">copyright université joseph ki-zerbo 202 Tous droits reservés</p>
     
     </footer>
+    
+
 
 </body>
 </html>

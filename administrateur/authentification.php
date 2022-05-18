@@ -23,13 +23,7 @@
     </header>
     <div class="container">
         <div class="row">
-        <?php
-                    if(isset($_GET["erreur"])){
-                        if($_GET["erreur"]=2){
-                            echo"non authentifier";
-                        }
-                    }
-                        ?>
+       
             <div class="col">
                 <form   class="user" method="post">
                    
@@ -82,11 +76,11 @@
          $rows = mysqli_num_rows($verif);
          if($rows==1){
           $_SESSION["email"]=$email;
-          header("location:../etudiant/acceuil.php");
+          header("location:../etudiant/acceuil.php?erreur=2");
         // echo"connexion reussie";
         }
         else{
-        echo"l'email ou le mot de passe est incorrect";
+        echo"<div style='text-align:center; color:red'> l'email ou le mot de passe est incorrect</div>";
         } 
     }
    

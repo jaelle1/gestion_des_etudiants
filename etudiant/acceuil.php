@@ -24,6 +24,21 @@
         </div>
     </header>
     <div class="container">
+        <div class="row">
+            <div class="col">
+            <?php
+                    if(isset($_GET["erreur"])){
+                        if($_GET["erreur"]=2){
+                            echo" <div style='text-align:center; font-weight:bold; color:green'>vous etes connecter<br>
+                            Que voulez-vous faire Monsieur</div>";
+                        }
+                    }
+                        ?>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
         <div class="row  text-center">
             <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10 acceuil offset-md-5 text-center">
                 <a href="./formulaire_etudiant.php"><p class="enregistrer">ENREGISTRER UN ETUDIANT</p>

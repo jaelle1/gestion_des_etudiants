@@ -17,7 +17,7 @@
         </div>
         <div class="row ">
             <div class="col-lg-12 col-md-12 col-sm-10 col-xs-10  texte text-center">
-               <h2>Gestion des tuteurs</h2>
+               <h2>Enregistrement du tuteur</h2>
            </div>
         </div>
 </header>
@@ -25,8 +25,8 @@
         <div class="row">
             <div class="col">
                 <form action="./bdd_tuteur.php" method="post"> 
-                    <input type="text" name="nom"  placeholder=" nom"  class="formulaire" required="" id="name"><br>
-                    <input type="text" name="prenom"  placeholder="prenom"  required=""class="formulaire" id="prename"><br><br>
+                    <input type="text" name="nom_tuteur"  placeholder=" nom"  class="formulaire" required="" id="name"><br>
+                    <input type="text" name="prenom_tuteur"  placeholder="prenom"  required=""class="formulaire" id="prename"><br><br>
                     <input type="number" name="numero" required="" id=""><br>
                     <button type="submit" name="valider" class="valider">valider</button>
                     

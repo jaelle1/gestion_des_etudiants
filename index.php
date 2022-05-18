@@ -24,6 +24,7 @@
             </div>
         </header>
         <div class="container">
+
             <div class="row conta">
                 <div class="col-lg-10 col-md-10 col-sm-5 col-xs-5 offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1 logoimage">
                     <img src="./images/vert6.jpg" alt="">
@@ -31,10 +32,26 @@
                 </div>
             </div>
         </div>
+           <?php
+            if(isset($_GET["error"])){
+                   if($_GET["error"]==1){
+                         echo"<div style='color:green; font-weight:bold; text-align:center; margin-top:20px;font-size:20px;'>administrateur inscris avec succes</div>";
+                        }
+                    }?>
         <div class="container">
             <div class="row rowp">
+                <?php
+                include("./administrateur/connexion.php");
+                $query="SELECT  * FROM administrateur";
+                $result=mysqli_query($base,$query);
+                $row=mysqli_fetch_assoc($result);
+                
+                ?>
                 <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2 offset-lg-5 offset-md-5 offset-sm-2 offset-xs-2 pp1">
-                    <p class="p1"><a href="./administrateur/inscription.php">s'inscrire</a></p>
+                   <?php
+                   if(!$row){
+                   echo'<p class="p1"><a href="./administrateur/inscription.php">s\'inscrire</a></p>';}
+                    ?>
                     <p class="p2 "><a href="./administrateur/authentification.php"> se connecter</a></p>
                 </div>
             </div>
@@ -48,18 +65,7 @@
             <p class="p-1 text-center copyright">copyright université joseph ki-zerbo 2020 Tous droits reservés</p>
         
 </footer>
-<?php
-include("./administrateur/connexion.php");
-  $limit=$base->prepare("SELECT COUNT(*) FROM administrateur");
-  $limit->execute();
-  $nombre=$limit->rowCount();
-if($nombre>0){
-echo"
-<script> 
-let bout =document.getElementById(insc)
-bout.style.displone='none'
-</script>";
-}
-?>
+
+
 </body>
 </html>

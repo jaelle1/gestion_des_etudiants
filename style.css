@@ -13,6 +13,7 @@ body{
 
 footer{
     
+    
     background-color: green;
 }
 .copyright{
@@ -53,7 +54,7 @@ input{
 }
 /*fin inscription et debut authentification*/
 .logo{
-    height: 100px;
+    height: 150px;
     width: 100px;
     
 }
@@ -114,7 +115,7 @@ button{
     background-color: green;
     padding-top: 5px;
     color: white;
-    margin-top: 5rem;
+    margin-top: 2.5rem;
 
 }
 .lister{
@@ -125,8 +126,8 @@ button{
     background-color: red;
     padding-top: 5px;
     color: white;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
 
 }
 .ajouter{
@@ -156,34 +157,65 @@ border-radius: 15px;
 height: 40px;
 width: 250px;
 border: solid 1px;
-margin-top: 10px;
-margin-left: 8rem;
+/* margin-top: 7px; */
+margin-left: 7rem;
 }
 .ajout{
     border-radius: 15px;
     margin-top: 10px;
     border: solid 1px;
     color: white;
-margin-top: 20px;
+/* margin-top: 15px; */
 }
 button a{
     text-decoration: none;
     color: white;
+
     
+}
+button a :hover{
+    color: yelow;
 }
 .valid{
     border-radius: 15px;
-    margin-top: 5px;
+    /* margin-top: 3px; */
     border: solid 1px;
     color: white;
-  
+
 }
-/*listes des etudnats*/
+.retour{
+    background-color: red;
+    border-radius: 15px;
+}
+/*listes des etudiants*/
 .list{
     border-radius: 15px !important;
     border-color: green;
     color: white;
 }
+.table{
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+    border: solid black 2px !important;
+    border-radius: 15px !important;
+    text-align: center;
+    justify-content: center;
+   
+}
+.element{
+    background-color:green;
+    color: white;
+    
+}
+.etudiant{
+    background-color: red
+    ;
+    border: solid 1px;
+    border-radius: 5px;
+
+}
+
 
 
 /*fin page liste des etudiants et debut page index */
@@ -196,8 +228,9 @@ button a{
 }
 
 h1{
+    margin-bottom: 1rem;
     color: white;
-    /* background-color: green; */
+    background-color: green;
    
 }
 .logoimage{
@@ -230,8 +263,13 @@ padding-top: 10px;
 }
 .pp1 a{
     text-decoration: none;
+    color: white;
+}
+.pp1 a :hover{
+    color: yelow;
 }
 .p1{
+    padding-top: 5px;
 background-color: green;
 font-weight: bold;
 font-size: 15px;
@@ -243,8 +281,8 @@ color: white !important;
 
 }
 .p2{
-    background-color: yellow;
-    
+    background-color: grey;
+    padding-top:5px;
     font-weight: bold;
     font-size: 15px;
     border: solid 1px;
@@ -253,5 +291,9 @@ color: white !important;
     width: 100px;
     color: white !important; 
     /* margin-left: 20px; */
+}
+tbody{
+    overflow-y: auto;
+    overflow-y: auto;
 }
 

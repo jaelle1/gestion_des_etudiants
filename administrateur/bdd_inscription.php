@@ -19,7 +19,7 @@ $result=mysqli_query($base,$query);
 if($password==$pconf){
     if($result){
         
-        header('location:./inscription.php?error=1');
+        header('location:../index.php?error=1');
     }
     else{
         echo"inscription echouée";
