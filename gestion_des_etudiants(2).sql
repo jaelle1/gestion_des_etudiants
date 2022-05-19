@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 17 Mai 2022 à 22:43
+-- Généré le :  Jeu 19 Mai 2022 à 02:58
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -33,14 +33,14 @@ CREATE TABLE IF NOT EXISTS `administrateur` (
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Contenu de la table `administrateur`
 --
 
 INSERT INTO `administrateur` (`id`, `nom`, `prenom`, `email`, `password`) VALUES
-(21, 'bationo', 'jaelle', 'jaelle@gmail.com', 'fa64b8dfc9ec91ed11966832554f18ec');
+(29, 'kientega', 'brigitte', 'kientiono1254@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055');
 
 -- --------------------------------------------------------
 
@@ -60,16 +60,22 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   KEY `id_tuteur_2` (`id_tuteur`),
   KEY `id_tuteur_3` (`id_tuteur`),
   KEY `id_tuteur_4` (`id_tuteur`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Contenu de la table `etudiant`
 --
 
 INSERT INTO `etudiant` (`id`, `nom`, `prenom`, `numero`, `email`, `id_tuteur`) VALUES
-(1, 'some', 'brice', 79632584, 'some@gmail.fr', 7),
-(2, 'fofana', 'neimata', 78541236, 'fofananeimata@gmail.com', 7),
-(3, 'sankara', 'alimantou', 75800204, 'sankaraalimantou6@gmail.com', 2);
+(5, 'kinda', 'alimantou', 78564211, 'alimantou@gmail.com', 14),
+(7, 'bagre', 'farida', 78526398, 'farida@gmail.com', 19),
+(8, 'zore', 'yacouba', 56451236, 'zore@gmail.com', 20),
+(9, 'kinda', 'Barnabas', 78635214, 'kinda@gmail.com', 14),
+(10, 'sawadogo', 'merveille', 789654321, 'sawadogo@gmail.com', 22),
+(11, 'valea', 'cynthia', 78635233, 'valea@gmail.com', 6),
+(12, 'namountougou', 'boureima', 67750236, 'naboure@gmail.comghj', 23),
+(14, 'bationo', 'mathieu', 52123602, 'mathino@gmail.com', 5),
+(15, 'bonkoungo', 'emilda', 51124478, 'emilda@gmail.fr', 24);
 
 -- --------------------------------------------------------
 
@@ -79,18 +85,17 @@ INSERT INTO `etudiant` (`id`, `nom`, `prenom`, `numero`, `email`, `id_tuteur`) V
 
 CREATE TABLE IF NOT EXISTS `tuteur` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
+  `nom_tuteur` varchar(255) NOT NULL,
+  `prenom_tuteur` varchar(255) NOT NULL,
   `numero` int(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Contenu de la table `tuteur`
 --
 
-INSERT INTO `tuteur` (`id`, `nom`, `prenom`, `numero`) VALUES
-(1, 'vhbjnk', 'ghjkl', 48655555),
+INSERT INTO `tuteur` (`id`, `nom_tuteur`, `prenom_tuteur`, `numero`) VALUES
 (2, 'ouedraogo', 'nopoko', 48655666),
 (3, 'bationo', 'eluera christiane', 78965412),
 (4, 'bationo', 'eluera christiane', 78965412),
@@ -99,7 +104,15 @@ INSERT INTO `tuteur` (`id`, `nom`, `prenom`, `numero`) VALUES
 (7, 'da', 'ali', 2147483647),
 (8, 'some', 'nadine', 78963521),
 (9, 'konombo ', 'germain', 50262623),
-(10, 'kieta', 'gaoussou', 56126699);
+(10, 'kieta', 'gaoussou', 56126699),
+(14, 'kinda', 'fleur', 78564212),
+(15, 'zore', 'moussa', 78526321),
+(19, 'bagre', 'dominique', 78963214),
+(20, 'zore', 'august', 78965412),
+(21, 'ki', 'august', 78965588),
+(22, 'sawadogo', 'nobert', 66554411),
+(23, 'namountougou', 'boukary', 78963214),
+(24, 'boukoungou', 'severin', 63369889);
 
 --
 -- Contraintes pour les tables exportées

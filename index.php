@@ -42,7 +42,7 @@
             <div class="row rowp">
                 <?php
                 include("./administrateur/connexion.php");
-                $query="SELECT  * FROM administrateur";
+                $query="SELECT * FROM administrateur";
                 $result=mysqli_query($base,$query);
                 $row=mysqli_fetch_assoc($result);
                 

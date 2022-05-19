@@ -32,6 +32,14 @@
                     <input type="password" name="password" placeholder="password" id="motdepasse"><br><br>
                     <input type="checkbox" class="affich" onclick="Afficher()" id="aff"> Afficher le mot de passe<br><br>
                     <input type="submit" name="connecter" value="connecter" placehoder="se connecter" class="connecter">
+                    <?php
+                    if(isset($_GET["error"])){
+                        if($_GET["error"]==1){
+                            echo"<div style='text-align:center; color:red; font-weight:bold'> l'email ou le mot de passe est incorrect</div>";
+
+                        }
+                    }
+                    ?>
                     
                        
                 </form>
@@ -80,7 +88,8 @@
         // echo"connexion reussie";
         }
         else{
-        echo"<div style='text-align:center; color:red'> l'email ou le mot de passe est incorrect</div>";
+            header("location:./authentification.php?eurreur=1");
+       
         } 
     }
    

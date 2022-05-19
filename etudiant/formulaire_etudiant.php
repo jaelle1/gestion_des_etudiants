@@ -32,12 +32,27 @@ $rows=mysqli_fetch_all($result, MYSQLI_ASSOC);
 <div class="container">
         <div class="row">
             <div class="col">
+                <?php
+                if(isset($_GET["eurr"])){
+                    if($_GET["eurr"]){
+                        echo"<div style='text-align:center;font-weight:bold;color:green'>enregistrement reussi
+                        </div>";
+                    }
+     
+                }
+                if(isset($_GET["error"])){
+                    if($_GET["error"]){
+                        echo"<div style='text-align:center;font-weight:bold;color:red'>enregistrement echoué!
+                        </div>";
+                    }
+                }
+                ?>
                 <form action="./bdd_formulaire_etudiant.php" method="post"> 
-                    <input type="text" name="nom"  placeholder="  nom"  class="formulaire" id="name"><br>
-                    <input type="text" name="prenom" placeholder="prenom" class="formulaire" id="prename"><br>
+                    <input type="text" name="nom"  placeholder="  nom"  required="" class="formulaire" id="name"><br>
+                    <input type="text" name="prenom" placeholder="prenom" required=""  class="formulaire" id="prename"><br>
                     
-                    <input type="number" name="numero" placehoder="numero" class="formulaire"id=""><br>
-                    <input type="email" name="email" placeholder="email" class="formulaire" id="email"><br>
+                    <input type="number" name="numero" required="" placehoder="numero" class="formulaire"id=""><br>
+                    <input type="email" name="email" required="" placeholder="email" class="formulaire" id="email"><br>
                     <select name="id" class="select"  id=""><br>
                     <option value="-1">selectionner un tuteur</option>
                     <?php 

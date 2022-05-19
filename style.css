@@ -107,6 +107,9 @@ button{
 .acceuil a{
     text-decoration: none;
 }
+.acceuil a:hover{
+color: white;
+}
 .enregistrer{
     height: 50px;
     width: 200px;
@@ -165,7 +168,7 @@ margin-left: 7rem;
     margin-top: 10px;
     border: solid 1px;
     color: white;
-/* margin-top: 15px; */
+margin-top: 10px;
 }
 button a{
     text-decoration: none;
@@ -173,7 +176,7 @@ button a{
 
     
 }
-button a :hover{
+button a:hover{
     color: yelow;
 }
 .valid{
@@ -186,6 +189,7 @@ button a :hover{
 .retour{
     background-color: red;
     border-radius: 15px;
+    margin-top: 10px;
 }
 /*listes des etudiants*/
 .list{
@@ -265,7 +269,7 @@ padding-top: 10px;
     text-decoration: none;
     color: white;
 }
-.pp1 a :hover{
+.pp1 a:hover{
     color: yelow;
 }
 .p1{
@@ -294,6 +298,6 @@ color: white !important;
 }
 tbody{
     overflow-y: auto;
-    overflow-y: auto;
+    overflow-x: auto;
 }
 
